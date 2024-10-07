@@ -15,15 +15,17 @@ function buildMetadata(sample) {
 
     // Inside a loop, you will need to use d3 to append new
     // tags for each key-value in the filtered metadata.
+    // assistance writing this code from tutor Lebuso
     for (key in demographicData) {
-      sampleMetadata.append('h6').text(`${key.toUpperCaseAS()}: ${demographicData[key]}`);
+      sampleMetadata.append('h6').text(`${key.toUpperCase()}: ${demographicData[key]}`);
     };
-
+    
   });
 }
 
 
 // function to build both charts
+// tutor Lebuso helped clean up code that I wrote to finish 'buildCharts' function
 function buildCharts(sample) {
   d3.json("https://static.bc-edx.com/data/dl-1-2/m14/lms/starter/samples.json").then((data) => {
 
@@ -108,6 +110,7 @@ function init() {
 
     // Use the list of sample names to populate the select options
     // Hint: Inside a loop, you will need to use d3 to append a new
+    // assistance writing this code from tutor Lebuso to complete dropdown menu
   
     for (let i = 0; i < names.length; i++) {
 
